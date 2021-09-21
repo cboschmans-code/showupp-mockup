@@ -133,7 +133,7 @@ export const TouristBottomNavigator = () => {
                         return (
                             <Image
                                 source={image}
-                                style={{height: 54, width: 36}}
+                                style={{height: 54, width: 54}}
                             />
                         )
                     }
@@ -155,7 +155,7 @@ export const TouristBottomNavigator = () => {
                         return (
                             <Image
                                 source={image}
-                                style={{height: 54, width: 36}}
+                                style={{height: 54, width: 54}}
                             />
                         )
                     }
@@ -171,7 +171,7 @@ export const TouristBottomNavigator = () => {
                         return (
                             <Image
                                 source={image}
-                                style={{height: 54, width: 36}}
+                                style={{height: 54, width: 54}}
                             />
                         )
                     }
@@ -187,10 +187,10 @@ export const TouristBottomNavigator = () => {
                         return (
                             <Image
                                 source={image}
-                                style={{height: 54, width: 36}}
+                                style={{height: 54, width: 54,marginBottom:0}}
                             />
                         )
-                    }
+                    },tabBarLabelStyle:{margin:0,}
                 }}/>
         </TouristTabNavigator.Navigator>)
 }
