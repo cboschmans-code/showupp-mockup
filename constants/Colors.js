@@ -1,0 +1,1 @@
+export default {primary:'#f26a4d'}
