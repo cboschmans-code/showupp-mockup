@@ -96,11 +96,13 @@ export const TouristBottomNavigator = () => {
                             style={{height: 54, width: 32, margin: 10}}/></View>
                     },
                     headerRight: () => {
-                        return <View style={{flexDirection: 'row'}}><Image
+                        return <View style={{flexDirection: 'row',margin:10,alignItems:'center'}}><Image
+                            source={require('../assets/images/header/reminderclock_inactive.png')}
+                            style={{height: 54, width: 40, margin: 10}}/><Image
                             source={require('../assets/images/header/mailbox_inactive_empty.png')}
-                            style={{height: 54, width: 32, margin: 10}}/><Image
+                            style={{height: 54, width: 40, margin: 10}}/><Image
                             source={require('../assets/images/header/bell_inactive_empty.png')}
-                            style={{height: 54, width: 32, margin: 10}}/></View>
+                            style={{height: 54, width: 40, margin: 10}}/></View>
                     },
                     tabBarVisible: true, tabBarIcon: ({focused}) => {
                         const image = focused
