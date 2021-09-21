@@ -12,10 +12,32 @@ import SearchScreen from "../screens/SearchScreen";
 import {TouchableWithoutFeedback} from "react-native-gesture-handler";
 
 
-const TouristOverviewNavigator = () => {
+const SearchStackNavigator = createStackNavigator();
+const SearchNavigator = () => {
+    return <SearchStackNavigator.Navigator screenOptions={{tabBarVisible: false}}>
+        <SearchStackNavigator.Screen
+            name="Search"
+            component={SearchScreen}
+            options={({navigation})=>({
+                headerTitle: '', headerLeft: (props) => {
+                    return (<View
+                        style={{
+                            flexDirection: 'row',
+                            alignItems: 'center'
+                        }}><TouchableWithoutFeedback {...props} onPress={()=>{navigation.goBack()}}><Image
+                        source={require('../assets/images/header/goback_orange-04.png')}
+                        style={{
+                            width: 72,
+                            height: 24,
+                            margin: 10
+                        }}/></TouchableWithoutFeedback><Text
+                        style={{color: Colors.primary}}
+                    >Go Back</Text></View>)
+                }
+            })}/>
 
+    </SearchStackNavigator.Navigator>
 }
-
 
 const ARStackNavigator = createStackNavigator();
 const ARNavigator = () => {
@@ -155,10 +177,10 @@ export const TouristBottomNavigator = () => {
                     }
                 }}/>
             <TouristTabNavigator.Screen
-                name="Search"
-                component={SearchScreen}
+                name="SearchNav"
+                component={SearchNavigator}
                 options={{
-                    tabBarStyle: {display: 'none'}, title: 'SEARCH', tabBarVisible: false, tabBarIcon: ({focused}) => {
+                    tabBarStyle: {display: 'none'}, title: 'SEARCH', tabBarVisible: false,headerShown: false, tabBarIcon: ({focused}) => {
                         const image = focused
                             ? require('../assets/images/footer/search_active-04.png')
                             : require('../assets/images/footer/search_inactive-04.png')
