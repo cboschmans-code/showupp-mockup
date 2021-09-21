@@ -235,9 +235,9 @@ const TouristOverviewScreen = (props) => {
         >
             <View style={{
                     backgroundColor: 'white', borderRadius: 40,margin:10,
-                    width: 80,
-                    height: 80,
-                    justifyContent: 'center',elevation:5
+                    width: 60,
+                    height: 60,
+                    justifyContent: 'center', alignItems:'center',elevation:5
                 }}><TouchableOpacity><Image
                 source={require('../assets/images/filtericons/filter_options-04.png')}
                 style={{height: 64, width: 46, margin: 10}}/></TouchableOpacity></View>
@@ -245,9 +245,9 @@ const TouristOverviewScreen = (props) => {
             <View
                 style={{
                     backgroundColor: 'white', borderRadius: 40,margin:10,
-                    width: 80,
-                    height: 80,
-                    justifyContent: 'center',elevation:5
+                    width: 60,
+                    height: 60,
+                    justifyContent: 'center',alignItems:'center',elevation:5
                 }}><TouchableOpacity><Image
                 source={require('../assets/images/filtericons/filter_favorites-04.png')}
                 style={{height: 64, width: 46, margin: 10}}/></TouchableOpacity></View>
